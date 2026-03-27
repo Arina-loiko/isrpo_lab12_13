@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Лойко Арина</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #ffc107 !important;
+            transition: color 0.3s ease;
+        }
+
+        #hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        #hero h1, #hero p {
+            color: white;
+        }
+
+        #hero .btn {
+            transition: transform 0.3s ease;
+        }
+
+        #hero .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .avatar {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .skill-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .portfolio-card {
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        .portfolio-card img {
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .btn {
+            border-radius: 25px;
+            padding: 10px 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 40px 0;
+        }
+
+        footer h5 {
+            color: #ffc107;
+            margin-bottom: 20px;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffc107;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">Арина Лойко</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">О себе</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Навыки</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Проекты</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-3">Привет, я Арина!</h1>
+            <p class="lead fs-4 mb-4">Начинающий веб-разработчик - студентка группы ИСП-232</p>
+            <a href="#about" class="btn btn-light btn-lg me-2">О себе</a>
+            <a href="#portfolio" class="btn btn-outline-light btn-lg">Мои проекты</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 mt-5">
+        <div class="container">
+            <h2 class="text-center section-title">О себе</h2>
+            <div class="row align-items-center g-5">
+                <div class="col-md-4 text-center">
+                    <img src="https://placeholder.apptor.studio/200/200/avatar.png" class="rounded-circle avatar shadow" alt="Аватар">
+                </div>
+                <div class="col-md-8">
+                    <h3 class="mb-3">Лойко Арина Станиславна</h3>
+                    <p class="lead">Студентка специальности "Информационные системы и программирование", группа ИСП-232.</p>
+                    <p>Увлекаюсь веб-разработкой, изучаю HTML, CSS, JavaScript и Bootstrap. Стремлюсь создавать красивые и удобные веб-сайты.</p>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <p><i class="bi bi-geo-alt-fill text-primary me-2"></i>Волжский</p>
+                            <p><i class="bi bi-envelope-fill text-primary me-2"></i>loiko@student.ru</p>
+                        </div>
+                        <div class="col-6">
+                            <p><i class="bi bi-mortarboard-fill text-primary me-2"></i>ИСП-232</p>
+                            <p><i class="bi bi-github text-primary me-2"></i>Arina-loiko</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Навыки</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm skill-card text-center p-4">
+                        <div class="mb-3">
+                            <i class="bi bi-filetype-html fs-1 text-danger"></i>
+                        </div>
+                        <h5>HTML5</h5>
+                        <p class="text-muted">Семантическая разметка, доступность, SEO-оптимизация</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" style="width: 85%">85%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm skill-card text-center p-4">
+                        <div class="mb-3">
+                            <i class="bi bi-filetype-css fs-1 text-primary"></i>
+                        </div>
+                        <h5>CSS3</h5>
+                        <p class="text-muted">Flexbox, Grid, анимации, адаптивная вёрстка</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" style="width: 80%">80%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm skill-card text-center p-4">
+                        <div class="mb-3">
+                            <i class="bi bi-filetype-js fs-1 text-warning"></i>
+                        </div>
+                        <h5>JavaScript</h5>
+                        <p class="text-muted">DOM, события, базовые алгоритмы</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 60%">60%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm skill-card text-center p-4">
+                        <div class="mb-3">
+                            <i class="bi bi-bootstrap-fill fs-1 text-purple" style="color: #7952b3;"></i>
+                        </div>
+                        <h5>Bootstrap 5</h5>
+                        <p class="text-muted">Grid, компоненты, утилитные классы</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 75%; background-color: #7952b3;">75%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm skill-card text-center p-4">
+                        <div class="mb-3">
+                            <i class="bi bi-git fs-1 text-danger"></i>
+                        </div>
+                        <h5>Git</h5>
+                        <p class="text-muted">Контроль версий, GitHub, коммиты</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" style="width: 70%">70%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm skill-card text-center p-4">
+                        <div class="mb-3">
+                            <i class="bi bi-database-fill fs-1 text-success"></i>
+                        </div>
+                        <h5>SQL</h5>
+                        <p class="text-muted">Базовые запросы, работа с базами данных</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 55%">55%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Мои проекты</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card portfolio-card shadow-sm">
+                        <img src="https://placeholder.apptor.studio/400/250/website.png" class="card-img-top" alt="Проект 1">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">HTML/CSS</span>
+                            <h5 class="card-title">Лабораторная работа №1</h5>
+                            <p class="card-text text-muted">Первая лаба по веб-разработке - базовая HTML разметка</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card portfolio-card shadow-sm">
+                        <img src="https://placeholder.apptor.studio/400/250/shop.png" class="card-img-top" alt="Проект 2">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">CSS</span>
+                            <h5 class="card-title">Лабораторная работа №6</h5>
+                            <p class="card-text text-muted">Стилизация страниц с помощью CSS</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card portfolio-card shadow-sm">
+                        <img src="https://placeholder.apptor.studio/400/250/app.png" class="card-img-top" alt="Проект 3">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">JavaScript</span>
+                            <h5 class="card-title">Лабораторная работа №10</h5>
+                            <p class="card-text text-muted">Интерактивные элементы на JavaScript</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card portfolio-card shadow-sm">
+                        <img src="https://placeholder.apptor.studio/400/250/dashboard.png" class="card-img-top" alt="Проект 4">
+                        <div class="card-body">
+                            <span class="badge bg-danger mb-2">Bootstrap</span>
+                            <h5 class="card-title">Лабораторная работа №12</h5>
+                            <p class="card-text text-muted">Введение в Bootstrap 5 - сетка и компоненты</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card portfolio-card shadow-sm">
+                        <img src="https://placeholder.apptor.studio/400/250/landing.png" class="card-img-top" alt="Проект 5">
+                        <div class="card-body">
+                            <span class="badge bg-info mb-2">Bootstrap</span>
+                            <h5 class="card-title">Лабораторная работа №13</h5>
+                            <p class="card-text text-muted">Адаптивный сайт с кастомными стилями</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card portfolio-card shadow-sm">
+                        <img src="https://placeholder.apptor.studio/400/250/blog.png" class="card-img-top" alt="Проект 6">
+                        <div class="card-body">
+                            <span class="badge bg-secondary mb-2">HTML/CSS/JS</span>
+                            <h5 class="card-title">Личный сайт</h5>
+                            <p class="card-text text-muted">Портфолио с описанием моих работ</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Контакты</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <form id="portfolioForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="pName" class="form-label">Имя</label>
+                            <input type="text" class="form-control" id="pName" placeholder="Введите ваше имя" required>
+                            <div class="invalid-feedback">Пожалуйста, введите ваше имя</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="pEmail" placeholder="name@example.com" required>
+                            <div class="invalid-feedback">Пожалуйста, введите корректный email</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pMessage" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="pMessage" rows="4" placeholder="Ваше сообщение" required></textarea>
+                            <div class="invalid-feedback">Пожалуйста, введите сообщение</div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Арина Лойко</h5>
+                    <p>Студентка группы ИСП-232. Изучаю веб-разработку и создаю интересные проекты.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Навигация</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#hero">Главная</a></li>
+                        <li><a href="#about">О себе</a></li>
+                        <li><a href="#skills">Навыки</a></li>
+                        <li><a href="#portfolio">Проекты</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Социальные сети</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="bi bi-github me-2"></i>GitHub</a></li>
+                        <li><a href="#"><i class="bi bi-telegram me-2"></i>Telegram</a></li>
+                        <li><a href="#"><i class="bi bi-envelope me-2"></i>Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255, 255, 255, 0.1)">
+            <div class="text-center mt-3">
+                <p class="mb-0">&copy; 2026 Лойко Арина. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            "use strict";
+            const form = document.getElementById("portfolioForm");
+            form.addEventListener("submit", function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault();
+                    alert("Сообщение отправлено!");
+                    form.reset();
+                    form.classList.remove("was-validated");
+                }
+                form.classList.add("was-validated");
+            }, false);
+        })();
+    </script>
+</body>
+</html>
